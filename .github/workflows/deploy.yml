@@ -26,6 +26,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Test application
+        run: |
+          pip install -r app/requirements.txt
+          python -m py_compile app/app.py
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "app")
+          from app import app
+
+          client = app.test_client()
+
+          health = client.get("/health")
+          assert health.status_code == 200
+          assert health.get_json()["status"] == "healthy"
+
+          version = client.get("/api/version")
+          assert version.status_code == 200
+
+          print("Application tests passed")
+          PY
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:

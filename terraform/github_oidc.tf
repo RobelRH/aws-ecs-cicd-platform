@@ -36,7 +36,7 @@ data "aws_iam_policy_document" "github_actions_assume_role" {
       variable = "token.actions.githubusercontent.com:sub"
 
       values = [
-        "repo:RobelRH/aws-ecs-cicd-platform:ref:refs/heads/main"
+        "repo:RobelRH@65722317/aws-ecs-cicd-platform@1351469304:ref:refs/heads/main"
       ]
     }
   }

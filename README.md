@@ -8,4 +8,4 @@ Git Push → GitHub Actions → AWS OIDC → Docker Build → Amazon ECR → Ama
 
 Each deployment builds a new Docker image tagged with the Git commit SHA and performs an ECS rolling deployment.
 
-![AWS Highly Available Cloud Architecture](docs/screenshots/dashboard.jpg)
+![AWS CI/CD](docs/screenshots/dashboard.jpg)

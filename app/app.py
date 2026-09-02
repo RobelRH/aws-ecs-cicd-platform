@@ -222,7 +222,7 @@ def home():
         </section>
 
         <footer>
-          Infrastructure provisioned with Terraform • Containers deployed automatically through CI/CD
+          Infrastructure provisioned with Terraform • Containers deployed automatically through CI/CD.
         </footer>
 
       </main>

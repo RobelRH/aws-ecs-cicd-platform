@@ -170,7 +170,7 @@ def home():
         </h1>
 
         <p class="subtitle">
-          A containerized application deployed automatically to AWS ECS
+          A containerized application deployed automatically to AWS ECS,
           through a secure CI/CD pipeline using GitHub Actions and AWS OIDC.
         </p>
 

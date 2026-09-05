@@ -176,7 +176,7 @@ def home():
 
         <div class="status">
           <span class="dot"></span>
-          System is Healthy
+          System Status is Healthy
         </div>
 
         <div class="grid">
